@@ -19,6 +19,4 @@ profile_picture:
   <LI> GitHub
   <LI> Linux
   <br><br>
-  에 능숙합니다. 
-
-</p>
+  에 능숙합니다. </p>

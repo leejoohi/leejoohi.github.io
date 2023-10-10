@@ -20,11 +20,11 @@ header:
 footer:
   show_powered_by: true
   contact:
-    - name: Email
-      value: yourmail@domain.com
-      link: mailto:yourmail@domain.com
+    - name: LeeJoohee
+      value: softwinter1210@gmail.com
+      link: softwinter1210@gmail.com
     - name: WeChat
-      value: YourWeChatUsername
+      value: sorryihavenowechat
       link: "#"
   follow:
     - name: Twitter
@@ -35,7 +35,7 @@ footer:
     - name: LinkedIn
       link: http://linkedin.com/in/YourLinkedInUsername
     - name: GitHub
-      link: http://github.com/YourGitHubUsername
+      link: http://github.com/leejoohi
     - name: Dribbble
       link: https://dribbble.com/YourDribbbleUsername
     - name: RSS

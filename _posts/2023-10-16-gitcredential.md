@@ -30,7 +30,7 @@ Git Credential Manager(GCM)을 Window에서 사용하는 방법을 서술한다.
 ## 설치 방법
 <LI> 기본 설치 방식 : Git 설치 시에 extra option에서 "Enable Git Credential Manager" 체크박스 선택 후 설치
 
-![ex001](https://ifh.cc/g/1p0V4N.png)
+<img src="{{ "/assets/img/content/post/gcmw001.png" | absolute_url }}" alt="001" class="post-pic"/>
 
 <br>
 <a href="https://learn.microsoft.com/en-us/azure/devops/repos/git/set-up-credential-managers?view=azure-devops"> 참고링크 MicroSoft learn document</a>
@@ -123,7 +123,7 @@ ssh-keygen -t rsa -b 4096
 
 키를 생성할 때 이름을 별도로 지정할 수 있으며, 패스워드 설정이 가능합니다.
 
-![ex002](https://ifh.cc/g/pwLh8X.png)
+<img src="{{ "/assets/img/content/post/gcmw002.png" | absolute_url }}" alt="002" class="post-pic"/>
 
 1. SSH 에이전트 실행 (선택사항):
 

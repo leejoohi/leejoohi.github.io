@@ -1,76 +1,53 @@
+{%- comment -%}
+  Include as: {%- include head.html -%}
+  Depends on: site.ga_tracking, site.ga_tracking_anonymize_ip,
+    site.search_enabled, site.static_files, site.favicon_ico.
+  Results in: HTML for the head element.
+  Includes:
+    css/activation.scss.liquid, head_custom.html.
+  Overwrites: 
+    ga_tracking_ids, ga_property, file, favicon.
+  Should not be cached, because included files depend on page.
+{%- endcomment -%}
+
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width initial-scale=1" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
-  {% assign page_is_article = false %}
-  {% if page.layout == "post" %}{% assign page_is_article = true %}{% endif %}
+  <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-default.css' | relative_url }}">
+  
+  <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-head-nav.css' | relative_url }}">
+  
+  <style id="jtd-nav-activation">
+  {% include css/activation.scss.liquid %}
+  </style>
 
-  {% assign page_title = "" %}
-  {% if page.draft %}{% assign page_title = page_title | append: "[DRAFT] " %}{% endif %}
-  {% if page.title %}
-    {% assign page_title = page_title | append: site.title | append: " | " | append: page.title %}
-  {% else %}
-    {% assign page_title = site.title %}
+  {% if site.ga_tracking != nil %}
+    {% assign ga_tracking_ids = site.ga_tracking | split: "," %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ ga_tracking_ids.first }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      {% for ga_property in ga_tracking_ids %}
+        gtag('config', '{{ ga_property }}'{% unless site.ga_tracking_anonymize_ip == nil %}, { 'anonymize_ip': true }{% endunless %});
+      {% endfor %}
+    </script>
   {% endif %}
 
-  {% assign page_description = "" %}
-  {% if page.draft %}{% assign page_description = page_description | append: "[DRAFT] " %}{% endif %}
-  {% if page.blurb %}
-    {% assign page_description = page_description | append: page.blurb %}
-  {% else %}
-    {% assign page_description = site.description %}
+  {% if site.search_enabled != false %}
+    <script src="{{ '/assets/js/vendor/lunr.min.js' | relative_url }}"></script>
   {% endif %}
 
-  {% assign page_url = page.url | replace: "index.html","" | replace: ".html","" | prepend: site.baseurl | prepend: site.url %}
+  <script src="{{ '/assets/js/just-the-docs.js' | relative_url }}"></script>
 
-  {% assign page_image = site.og_image | prepend: site.baseurl | prepend: site.url %}
-  {% if page.og_image %}
-    {% assign page_image = site.url + page.og_image %}
-  {% endif %}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  {% for follow in site.footer.follow %}
-    {% if follow.name == 'Twitter' %}
-      {% assign twitter_username = follow.username %}
-      {% break %}
-    {% endif %}
-  {% endfor %}
+  {% include_cached favicon.html %}
 
-  <!-- Primary Meta Tags -->
-  <title>{{ page_title }}</title>
-  <meta name="title" content="{{ page_title }}"/>
-  <meta name="description" content="{{ page_description }}"/>
+  {% seo %}
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:site_name" content="{{ page_title }}"/>
-  <meta property="og:type" content="{% if page_is_article %}article{% else %}website{% endif %}"/>
-  <meta property="og:url" content="{{ page_url }}"/>
-  <meta property="og:title" content="{{ page_title }}"/>
-  <meta property="og:description" content="{{ page_description }}"/>
-  <meta property="og:image" content="{{ page_image }}"/>
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image"/>
-  <meta property="twitter:url" content="{{ page_url }}"/>
-  <meta property="twitter:title" content="{{ page_title }}"/>
-  <meta property="twitter:description" content="{{ page_description }}"/>
-  <meta property="twitter:image" content="{{ page_image }}"/>
-  {% if twitter_username %}
-    <meta property="twitter:creator" content="{{ twitter_username }}"/>
-    <meta property="twitter:site" content="{{ twitter_username }}"/>
-  {% endif %}
-
-  <link rel="stylesheet" href="{{ "/assets/css/main.css" | absolute_url }}"/>
-  <link rel="canonical" href="{{ page_url }}"/>
-  <link rel="shortcut icon" href="{{ "/favicon.ico" | absolute_url }}" type="image/x-icon"/>
-
-  <!-- Google Analytics -->
-  <script>
-    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-    ga('create', "{{ site.google_analytics }}", "auto");
-    ga('send', "pageview");
-  </script>
-  <script async src="https://www.google-analytics.com/analytics.js"></script>
-
+  {% include head_custom.html %}
 
 </head>

@@ -26,7 +26,7 @@ Git Credential Manager for Windows (GCMW)는 Windows 환경에서 Git 작업 시
 
 ## GCM
 ### 설치 방법
-<li> 기본 설치 방식 : Git 설치 시에 extra option 에서 *Enable Git Credential Manager* 체크박스 선택 후 설치
+<li> 기본 설치 방식 : Git 설치 시에 extra option 에서 *Enable Git Credential Manager* 체크박스 선택 후 설치 </li>
 
 <img src="{{ "/assets/img/content/post/gcmw001.png" | absolute_url }}" alt="001" class="post-pic"/>
 

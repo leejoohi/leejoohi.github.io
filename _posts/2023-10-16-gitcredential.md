@@ -30,17 +30,17 @@ Git Credential Manager(GCM)을 Window에서 사용하는 방법을 서술한다.
 ## 설치 방법
 <LI> 기본 설치 방식 : Git 설치 시에 extra option에서 "Enable Git Credential Manager" 체크박스 선택 후 설치
 
-![ex001](https://ifh.cc/g/1p0V4N.png)
+<img src="{{ "/assets/img/content/post/gcmw001.png" | absolute_url }}" alt="001" class="post-pic"/>
 
 <br>
 <a href="https://learn.microsoft.com/en-us/azure/devops/repos/git/set-up-credential-managers?view=azure-devops"> 참고링크 MicroSoft learn document</a>
 
 <LI> 빌드 방식 : Git repository <a href="https://github.com/git-ecosystem/git-credential-manager.git">🌐</a> 코드 저장 및 솔루션 파일 디렉토리에 복제. 솔루션 빌드하기
 
-
 <br>
 
 ## 설정 방법
+
 1. 계정 로그인하기
 
 ``` bash
@@ -84,10 +84,7 @@ git config --global credential.helper store
 
 </div>
 
-위 코드를 복사하여 마크다운 파일에 붙여넣으면 예쁜 div 박스로 Cache 모드와 Store 모드의 특징, 장단점을 표시할 수 있습니다.
-
-
-3. (선택사항) 윈도우 Keychain 시스템 적용하기
+1. (선택사항) 윈도우 Keychain 시스템 적용하기
 
  ```bash
   git config --global credential.helper wincred
@@ -123,7 +120,7 @@ ssh-keygen -t rsa -b 4096
 
 키를 생성할 때 이름을 별도로 지정할 수 있으며, 패스워드 설정이 가능합니다.
 
-![ex002](https://ifh.cc/g/pwLh8X.png)
+<img src="{{ "/assets/img/content/post/gcmw002.png" | absolute_url }}" alt="002" class="post-pic"/>
 
 1. SSH 에이전트 실행 (선택사항):
 

@@ -14,10 +14,10 @@ Git Credential Manager for Windows (GCMW)는 Windows 환경에서 Git 작업 시
 - [GCM]
   - [설치 방법](#설치-방법)
   - [설정 방법](#설정-방법)
-  - [사용 방법]
-- 그 외 방법
-  - [SSH key]
-  - [GIT CLONE]
+  - [사용 방법](#사용-방법)
+- [그 외 방법](#그-외-방법)
+  - [SSH key](#ssh-key)
+  - [GIT CLONE](#git)
 
 <br>
 <br>
@@ -42,8 +42,6 @@ Git Credential Manager for Windows (GCMW)는 Windows 환경에서 Git 작업 시
 ### 설정 방법
 
 <ol> 1. 계정 로그인하기 </ol>
-
-<br>
 
 ``` bash
 git config user.name "사용자 이름"
@@ -75,7 +73,7 @@ git config --global credential.helper store
 - 기본 설정으로 제공되어 별도의 설정이 필요 없습니다.
 
 </div>
-<br>
+
 <div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #31708f; background-color: #d9edf7; border-color: #bce8f1;">
 
 ## Store 모드 특징, 장단점
@@ -102,6 +100,7 @@ git config --global credential.helper store
 <br>
 
 ---
+<br>
 
 ## 그 외 방법
  
@@ -173,8 +172,9 @@ ssh -T git@github.com
 
 <BR>
 
-## GIT  
-git clone 을 받을 때 주소 안에 사용자의 Id와 Password(또는 Tocken)을 입력한 주소로 clone을 받으면 추후에 아이디와 비밀번호를 입력하지 않아도 사용할 수 있다.
+### GIT Clone
+
+#### git clone 을 받을 때 주소 안에 사용자의 Id와 Password(또는 Tocken)을 입력한 주소로 clone을 받으면 추후에 아이디와 비밀번호를 입력하지 않아도 사용할 수 있다.
 
 ```bash
 git clone https://<ID>:<PASSWORD>@github.com/munsa3407/TEST.git

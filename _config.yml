@@ -8,7 +8,7 @@ baseurl: "" # the subpath of the site
 url: "https://leejoohi.github.io/" # the base hostname & protocol for the site
 og_image: /assets/img/profile-pic.jpg
 google_analytics: "UA-121636368-3"
-remote_theme: eliottvincent/bay
+theme: just-the-docs
 
 header:
   pages:
@@ -63,3 +63,5 @@ exclude:
 
 # Used for defeating caching
 version: 1
+
+server: true

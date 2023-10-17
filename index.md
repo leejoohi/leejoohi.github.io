@@ -29,5 +29,6 @@ profile_picture:
 
 <p> 2023.10 세번째 팀프로젝트, 개인정보 비식별화 인공지능 VOV
 <br>
-<a href="https://github.com/oblsoun/nomercy.git">[teamproj_vov]</a>
+<a href="https://github.com/leejoohi/vov.git">[teamproj_vov]</a>
+<a href="https://github.com/leejoohi/vov_snapmachine.git">[teamproj_vov_snapmachine]</a>
   

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Git Credential Manager for Windows 가이드"
 date:   2023-10-16 19:01:00 +0900
 ---
@@ -26,14 +26,14 @@ Git Credential Manager for Windows (GCMW)는 Windows 환경에서 Git 작업 시
 
 ## GCM
 ### 설치 방법
-<li> 기본 설치 방식 : Git 설치 시에 extra option 에서**Enable Git Credential Manager**체크박스 선택 후 설치 </li>
+-  기본 설치 방식 : Git 설치 시에 extra option 에서**Enable Git Credential Manager**체크박스 선택 후 설치
 
 <img src="{{ "/assets/images/content/post/gcmw001.png" | absolute_url }}" alt="001" class="post-pic"/>
 
 <br>
 <a href="https://learn.microsoft.com/en-us/azure/devops/repos/git/set-up-credential-managers?view=azure-devops"> 참고링크 MicroSoft learn document</a>
 
-<li> 빌드 방식 : 다음 링크의 레포지토리를 솔루션 파일 디렉토리에 복제 후 빌드 </li>
+- 빌드 방식 : 다음 링크의 레포지토리를 솔루션 파일 디렉토리에 복제 후 빌드
 
 ### <a href="https://github.com/git-ecosystem/git-credential-manager.git">GCMW link 🌐</a> 
 
@@ -41,7 +41,7 @@ Git Credential Manager for Windows (GCMW)는 Windows 환경에서 Git 작업 시
 
 ### 설정 방법
 
-<ol> 1. 계정 로그인하기 </ol>
+1. 계정 로그인하기
 
 ``` bash
 git config user.name "사용자 이름"
@@ -53,7 +53,7 @@ git config. user.password "사용자 패스워드(Tocken)"
 # 형식으로 작성한다
 ```
 
-<ol> 2. GCM 모드 선택하기 </ol>
+1. GCM 모드 선택하기
 
 ``` bash
 # cache mode (default)
@@ -68,6 +68,7 @@ git config --global credential.helper store
 <div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #31708f; background-color: #d9edf7; border-color: #bce8f1;">
 
 ## Cache 모드 특징, 장단점
+
 - 캐시는 인증 정보를 일시적으로 저장하는 방식입니다.
 - 사용자가 Git 작업을 수행하는 동안에만 메모리에 저장되며, Git 명령이 종료되면 제거됩니다.
 - 기본 설정으로 제공되어 별도의 설정이 필요 없습니다.
@@ -77,6 +78,7 @@ git config --global credential.helper store
 <div style="padding: 15px; border: 1px solid transparent; border-color: transparent; margin-bottom: 20px; border-radius: 4px; color: #31708f; background-color: #d9edf7; border-color: #bce8f1;">
 
 ## Store 모드 특징, 장단점
+
 - 저장소는 인증 정보를 영구적으로 저장하는 방식입니다.
 - 사용자가 로그아웃하거나 장치를 종료해도 인증 정보가 계속 유지됩니다. 
 - 암호화된 형태로 사용자의 시스템에 저장됩니다.
@@ -84,7 +86,7 @@ git config --global credential.helper store
 
 </div>
 
-<ol> 3. (선택사항) 윈도우 Keychain 시스템 적용하기 </ol>
+1. (선택사항) 윈도우 Keychain 시스템 적용하기
 
  ```bash
   git config --global credential.helper wincred
@@ -106,7 +108,7 @@ git config --global credential.helper store
  
 ###  SSH KEY
 
-<ol> 1. SSH 키 생성하기 </ol>
+1. SSH 키 생성하기
 
 ```bash
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
@@ -126,7 +128,7 @@ ssh-keygen -t rsa -b 4096
 
 <br>
 
-<ol> 2. (선택사항) SSH 에이전트 실행  </ol>
+1. (선택사항) SSH 에이전트 실행
 
 ```bash
 eval "$(ssh-agent -s)"
@@ -140,7 +142,7 @@ ssh-add ~/.ssh/id_rsa
 
 <br>
 
-<ol> 3. SSH 공개키 복사하기 </ol>
+1. SSH 공개키 복사하기
 
 ```bash
 cat ~/.ssh/id_rsa.pub
@@ -153,14 +155,14 @@ cat ~/.ssh/id_rsa.pub
 
 <br>
 
-<ol> 4. Git 서비스에 SSH 공개키 등록하기 </ol>
+1. Git 서비스에 SSH 공개키 등록하기
 
 GitHub의 경우, [Settings] -> [SSH and GPG keys] -> [New SSH key] 클릭 후 복사한 키를 등록합니다.
 GitLab이나 Bitbucket 등의 다른 서비스는 각각의 설정 페이지에서 SSH 키를 등록할 수 있습니다.
 
 <br>
 
-<ol> 5. 테스트 </ol>
+1. 테스트 하기
 
 ```bash
 ssh -T git@github.com

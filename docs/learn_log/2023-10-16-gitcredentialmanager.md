@@ -17,7 +17,7 @@ Git Credential Manager for Windows (GCMW)는 Windows 환경에서 Git 작업 시
   - [사용 방법](#사용-방법)
 - [그 외 방법](#그-외-방법)
   - [SSH key](#ssh-key)
-  - [GIT CLONE](#git)
+  - [GIT CLONE](#git-clone)
 
 <br>
 <br>
@@ -124,7 +124,7 @@ ssh-keygen -t rsa -b 4096
 
 <br>
 
-<img src="{{ "/assets/img/content/post/gcmw002.png" | absolute_url }}" alt="002" class="post-pic"/>
+<img src="{{ "/assets/images/content/post/gcmw002.png" | absolute_url }}" alt="002" class="post-pic"/>
 
 <br>
 

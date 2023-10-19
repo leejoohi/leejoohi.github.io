@@ -6,7 +6,7 @@ description: "Jookeeper blog prologue"
 permalink: /
 ---
 
-# JOOKEEPER :rainbow:
+# JOOKEEPER blog 🐛
 
 ## 안녕하세요. 개발 공부를 하고 있는 이주희입니다.
 <p> 

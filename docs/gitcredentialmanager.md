@@ -2,6 +2,7 @@
 layout: default
 title:  "Git Credential Manager for Windows 가이드"
 date:   2023-10-16 19:01:00 +0900
+parent: LEARN_LOG
 ---
 
 

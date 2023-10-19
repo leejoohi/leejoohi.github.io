@@ -2,6 +2,7 @@
 layout: post
 title:  "AWS Cloud 서비스 배포 실습"
 date:   2023-10-15 23:30:00 +0900
+parent: DEVELOP_LOG
 ---
 # AWS Cloud 서비스 배포 실습
 ### 서론

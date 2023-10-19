@@ -2,6 +2,7 @@
 layout: default
 title:  "Django error 코드 분석 #001"
 date:   2023-10-11 22:55:08 +0900
+parent: ERROR_LOG
 ---
 # Django error 코드 분석 #001
 Django 프레임워크를 사용하면서 RDS와 S3에 연결되어 있는 이미지를 다운로드하기 위한 코드를 작성 중 다음과 같은 에러 상황에 놓였다.

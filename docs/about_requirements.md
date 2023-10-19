@@ -2,6 +2,7 @@
 layout: default
 title:  "requirements.txt 에 대하여"
 date:   2023-10-19 18:58:00 +0900
+parent: DEVELOP_LOG
 ---
 
 # requirements.txt 에 대하여
@@ -58,7 +59,7 @@ pilkit>=2.0
 <p> 또한 n 버전대의 패키지 설치가 필요하고 정확한 버전이 중요하지 않다면 다음과 같이 서술할 수 있다. </p>
 
 ```
-pilkit>=2.*
+pilkit>=n.*
 ```
 
 <br>

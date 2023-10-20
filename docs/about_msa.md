@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  "requirements.txt 에 대하여"
+title:  "MSA 이해"
 date:   2023-10-19 18:58:00 +0900
 parent: LEARN_LOG
 ---

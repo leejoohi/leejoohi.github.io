@@ -5,33 +5,43 @@ date:   2023-10-21 18:04:00 +0900
 parent: LEARN_LOG
 ---
 
- # CAP 이론 이해
+# CAP 이론 이해
 
 CAP 이론은 분산 시스템의 일관성(Consistency), 가용성(Availability), 분할 내성(Partition tolerance)을 나타내는 세 가지 속성을 설명하는 이론이다. 
 
 ## CAP의 정의
 
-1. 일관성 (Consistency):
+### 1. 일관성 (Consistency):
 
 일관성은 시스템 내의 모든 노드들이 동일한 데이터를 보는 것을 의미한다.
  * '노드 node'란? 컴퓨터 네트워크에서 주로 사용하는 용어로 기계장치 1개를 의미한다. [참고자료](https://engineer-mole.tistory.com/141)
+
+ <br>
+
 어떤 노드에서 데이터를 변경하면, 이 변경이 다른 모든 노드에 반영되기까지 시간이 걸린다.
 일관성이 높은 시스템은 데이터의 무결성을 중요시하며, ACID 트랜잭션 특성을 따른다.
+
+<br>
+
  * 'ACID 트랜잭션'이란? 트랜잭션은 데이터의 논리적인 작업단위인데, ACID의 특성을 따른다. [참고자료](https://victorydntmd.tistory.com/129)
 
 <br>
 
-1. 가용성 (Availability):
+### 2. 가용성 (Availability):
 
 가용성은 시스템이 항상 응답 가능한 상태를 유지하는 것을 의미한다.
 가용성이 높은 시스템은 높은 신뢰성을 가지며, 사용자는 언제나 서비스를 이용할 수 있다.
 
 <br>
 
-1. 분할 내성 (Partition Tolerance):
+### 3. 분할 내성 (Partition Tolerance):
 
 분할 내성은 네트워크의 일시적인 분할이 발생해도 시스템이 계속 동작할 수 있는 능력을 의미한다.
 네트워크의 일부가 다른 부분과 통신이 끊어져도 각각 독립적으로 동작할 수 있어야 한다.
+
+<br>
+
+<br>
 
 
 CAP 이론은 3가지의 속성으로 이루어져있지만 "분산 시스템은 Consistency, Availability, Partition tolerance 중에 두 가지만 보장할 수 있다"라는 원칙을 기반으로 한다. 즉 3개의 속성을 모두 따를 수 없고 한 가지는 희생, 불가능해진다.

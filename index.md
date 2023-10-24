@@ -15,6 +15,8 @@ permalink: /
 </p>
 
 <br>
+---
+
 
 ### 2023.05 첫 팀프로젝트, 화장품 판매 홈페이지 Varda
 <a href="https://github.com/leejoohi/varda.git">[teamproj_varda]</a>
